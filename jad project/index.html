@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+<title>Covid Center - Dashboard</title>
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/style.css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="icon" href="/assets/img/Covidcenter_logo.png">
+<script src="assets/js/dashboardDataService.js"></script>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <div class="header-left">
+                <a href="index.html" class="logo">
+                    <img src="assets/img/Covidcenter2.png" style="max-height: 60px;width: 149px;" alt="Logo">
+                </a>
+                <a href="index.html" class="logo logo-small">
+                    <img src="assets/img/Covidcenter_logo.png" id="mini-logo" width="30" height="30">
+                </a>
+            </div>
+
+            <a href="javascript:void(0);" id="toggle_btn">
+                <span class="material-symbols-outlined" id="material-symbols-outlined-menu">menu</span></a>
+                
+                <a class="mobile_btn" id="mobile_btn">
+                <i class="fa fa-bars"></i>
+                </a>
+
+
+
+                <ul class="nav user-menu">
+                    <li class="nav-item dropdown has-arrow">
+                    <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-user" id="fa-solid-fa-user"></i>
+                    <span class="user-img"><p>name</p></span>
+                    </a>
+                    <div class="dropdown-menu">
+                    <div class="user-text">
+                    <h6>Seema Sisty</h6>
+                    <p class="text-muted mb-0">My Profile</p>
+                    <a class="dropdown-item" href="login.html">Logout</a>
+                    </div>
+                    </div>
+                    </li>
+                </ul>
+
+
+
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+                    <div id="sidebar-menu" class="sidebar-menu">
+                        <ul class="sidebar-ul1">
+                            <li class="menu-title">
+                            </li>
+                            <li class="active">
+                                <a href="index.html"><span class="material-symbols-outlined">home</span><span>Dashboard</span></a>
+                            </li>   
+                            <li>
+                                <a href="chart.html"><span class="material-symbols-outlined">analytics</span><span>Chart</span></a>
+                            </li>
+                            <li>
+                                <a href="rapid test.html"><span class="material-symbols-outlined">labs</span><span>Rapid Test</span></a>
+                            </li>
+                            <li>
+                                <a href="news.html"><span class="material-symbols-outlined">newspaper</span><span>News</span></a>
+                            </li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+        
+        <div class="page-wrapper">
+            <div class="content container-fluid">
+                <div class="row">
+                    <div class="col-xl-4 col-sm-4 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dash-widget-header">
+                                    <span class="dash-widget-icon bg-primary">
+                                        <i class="fa-solid fa-virus-covid"></i>
+                                    </span>
+                                    <div class="dash-count">
+                                        <a href="#" class="count-title">Daily Cases (lebanon/daily)</a>
+                                        <a href="#" id="current-cases" class="count"> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-4 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dash-widget-header">
+                                    <span class="dash-widget-icon bg-warning">
+                                        <i class="fa-solid fa-virus-covid"></i>
+                                    </span>
+                                    <div class="dash-count">
+                                        <a href="#" class="count-title">Critical Cases (lebanon/daily)</a>
+                                        <a href="#" class="count" id="critical-cases"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-4 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dash-widget-header">
+                                    <span class="dash-widget-icon bg-danger">
+                                        <i class="fa-solid fa-skull-crossbones"></i>   
+                                    </span>
+                                    <div class="dash-count">
+                                        <a href="#" class="count-title">Deaths(lebanon/daily)</a>
+                                        <a href="#" class="count" id="death-cases"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-4 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dash-widget-header">
+                                    <span class="dash-widget-icon bg-primary">
+                                        <i class="fa-solid fa-notes-medical"></i>
+                                    </span>
+                                    <div class="dash-count">
+                                        <a href="#" class="count-title">Recovery (lebanon)</a>
+                                        <a href="#" id="recovered-cases" class="count"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-4 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dash-widget-header">
+                                    <span class="dash-widget-icon bg-primary">
+                                        <i class="fa-solid fa-virus-covid"></i>
+                                    </span>
+                                    <div class="dash-count">
+                                        <a href="#" class="count-title">Total Cases (lebanon)</a>
+                                        <a href="#" class="count" id="total-cases"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-4 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dash-widget-header">
+                                    <span class="dash-widget-icon bg-danger">
+                                        <i class="fa-solid fa-skull-crossbones"></i>
+                                    </span>
+                                    <div class="dash-count">
+                                        <a href="#" class="count-title">Total Deaths (lebanon)</a>
+                                        <a href="#" id="total-death-cases" class="count"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 d-flex">
+                        <div class="card card-table flex-fill">
+                            <div class="card-body">
+                                <div class="table-responsive no-radius">
+                                    <table class="table table-hover table-center">
+                                        <thead>
+                                            <tr>
+                                                <th>Country</th>
+                                                <th>Daily Cases</th>
+                                                <th class="text-center">Critical Cases</th>
+                                                <th class="text-center">Deaths</th>
+                                                <th class="text-center">Recovery</th>
+                                                <th class="text-center">Total Cases</th>
+                                                <th class="text-end">Total Deaths</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-nowrap">
+                                                    <div class="font-weight-600">United States</div>
+                                                </td>
+                                                <td class="text-nowrap" id="daily-cases-us"></td>
+                                                <td class="text-center" id="critical-cases-us"></td>
+                                                <td class="text-center" id="death-us"></td>
+                                                <td class="text-center" id="recovery-cases-us"></td>
+                                                <td class="text-center" id="total-cases-us"></td>
+                                                <td class="text-end">
+                                                    <div class="font-weight-600 text-danger" id="total-deaths-us"></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-nowrap">
+                                                    <div class="font-weight-600">India</div>
+                                                </td>
+                                                <td class="text-nowrap" id="daily-cases-in"></td>
+                                                <td class="text-center" id="critical-cases-in"></td>
+                                                <td class="text-center" id="death-in"></td>
+                                                <td class="text-center" id="recovery-cases-in"></td>
+                                                <td class="text-center" id="total-cases-in"></td>
+                                                <td class="text-end">
+                                                    <div class="font-weight-600 text-danger" id="total-deaths-in"></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-nowrap">
+                                                    <div class="font-weight-600">Spain</div>
+                                                </td>
+                                                <td class="text-nowrap" id="daily-cases-sp"></td>
+                                                <td class="text-center" id="critical-cases-sp"></td>
+                                                <td class="text-center" id="death-sp"></td>
+                                                <td class="text-center" id="recovery-cases-sp"></td>
+                                                <td class="text-center" id="total-cases-sp"></td>
+                                                <td class="text-end">
+                                                    <div class="font-weight-600 text-danger" id="total-deaths-sp"></div>
+                                                </td>
+                                            </tr>
+    
+                                            <tr>
+                                                <td class="text-nowrap">
+                                                    <div class="font-weight-600">China</div>
+                                                </td>
+                                                <td class="text-nowrap" id="daily-cases-ch"></td>
+                                                <td class="text-center" id="critical-cases-ch"></td>
+                                                <td class="text-center" id="death-ch"></td>
+                                                <td class="text-center" id="recovery-cases-ch"></td>
+                                                <td class="text-center" id="total-cases-ch"></td>
+                                                <td class="text-end">
+                                                    <div class="font-weight-600 text-danger" id="total-deaths-ch"></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-nowrap">
+                                                    <div class="font-weight-600">Brazil</div>
+                                                </td>
+                                                <td class="text-nowrap" id="daily-cases-br"></td>
+                                                <td class="text-center" id="critical-cases-br"></td>
+                                                <td class="text-center" id="death-br"></td>
+                                                <td class="text-center" id="recovery-cases-br"></td>
+                                                <td class="text-center" id="total-cases-br"></td>
+                                                <td class="text-end">
+                                                    <div class="font-weight-600 text-danger" id="total-deaths-br"></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src= "assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

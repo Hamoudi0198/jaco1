@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+body {
+    background: #fff;
+    font-family: 'PT Sans', sans-serif;
+}
+h2 {
+    padding-top: 1.5rem;
+}
+a {
+    padding: 6px 1.2rem;
+    text-decoration: none;
+    color: #333;
+}
+a:hover {
+    color: #da5767;
+    text-decoration: none;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.form-gr1 {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+.form-control1 {
+    width: 410px;
+    border: transparent;
+    margin-bottom: 0px;
+    background-color: #f8f9fa;
+    padding: 25px 15px;
+}
+.card {
+    border: 0.40rem solid #f8f9fa;
+    top: 10%;
+}
+.form-control {
+    border: transparent;
+    margin-bottom: 0px;
+    background-color: #f8f9fa;
+    padding: 25px 15px;
+
+}
+.btn {
+    padding: 0.6rem 1.2rem;
+    background: #da5767;
+    color: white;
+    cursor: pointer;
+    border: 2px solid #da5767;
+}
+.btn-primary:hover {
+    background-color: #df8c96;
+    border-color: #df8c96;
+    transition: .3s;
+}
+.login-create-btn {
+    display: flex;
+    justify-content: space-between;
+}
+.material-symbols-outlined {
+    border-right: 1px solid;
+    padding-top: 12px;
+}
+.logo-name {
+    display: flex;
+    border: 1px solid;
+    height: 50px;
+}
+.form-grp {
+    display: flex;
+    border: 1px solid;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+#a1{
+    text-decoration: none;
+    color: #333;
+    margin-top: 16px;
+    padding: 0px;
+}
+#a1:hover {
+    color: #da5767;
+    text-decoration: none;
+}
+
+.sign-up-text{
+    display: flex;
+    gap: 2px;
+}
+
+.error-msg{
+    
+}
